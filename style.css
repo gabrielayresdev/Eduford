@@ -21,6 +21,11 @@ header {
 
 /* HEADER - NAV */
 
+.cabecalho {
+    width: 100%;
+    height: 60px;
+}
+
 .cabecalho nav {
     padding: 2% 6%;
     display: flex;
@@ -32,6 +37,12 @@ header {
     height: 43px;
 }
 
+.cabecalho__menu-lateral,
+.cabecalho__fechar {
+    font-size: 21px;
+    display: none;
+}
+
 .cabecalho__links ul {
     display: flex;
     gap: 16px;
@@ -41,6 +52,21 @@ header {
     list-style-type: none;
 }
 
+.cabecalho__links ul li::after {
+    content: '';
+    background: #f44336;
+    width: 0;
+    height: 2px;
+    margin: auto;
+    display: block;
+    transition: .5s;
+}
+
+.cabecalho__links ul li:hover::after {
+    width: 100%;
+    transition: 1s;
+}
+
 .cabecalho__links ul li a {
     text-transform: uppercase;
     text-decoration: none;
@@ -48,9 +74,17 @@ header {
     font-size: 13px;
 }
 
+.menu-lateral {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    z-index: 2;
+}
+
 /* HEADER - CONTEÚDO */
 
-.cabecalho__conteudo {
+.header__conteudo {
     position: absolute;
     width: 88%;
     top: 50%;
@@ -63,6 +97,83 @@ header {
     gap: 32px;
 }
 
-.cabecalho__titulo {
+.header__titulo {
     font-size: 62px;
+}
+
+.header__texto {
+    font-size: 14px;
+}
+
+.header__botao {
+    text-decoration: none;
+    font-size: 13px;
+    color: #FFFFFF;
+
+    border: 1px solid #FFFFFF;
+    padding: 12px 34px;
+    margin-top: 16px;
+    min-width: 0;
+
+    align-self: center;
+    transition: 1s;
+}
+
+.header__botao:hover {
+    background: #f44336;
+    border-color: #f44336;
+    transition: 1s;
+}
+
+@media screen and (max-width: 540px) {
+    .header__titulo {
+        font-size: 25px;
+    }
+
+    .header__texto {
+        font-size: 0.9rem;
+        opacity: 0.9;
+    }
+
+    .cabecalho__menu-lateral {
+        display: block
+    }
+
+    .cabecalho__links {
+        position: absolute;
+        top: 0;
+        right: -200vw;
+        display: block;
+        z-index: 2;
+        padding: 16px;
+        background: #f44336;
+        width: 65vw;
+        height: 100vh;
+        transition: .5;
+    }
+
+    .cabecalho__links ul {
+        display: flex;
+        flex-direction: column;
+
+        text-align: left;
+
+        padding-top: 10px;
+    }
+
+    .cabecalho__links ul li {
+        display: flex;
+        align-items: center;
+        height: 2rem;
+    }
+
+    .cabecalho__fechar--ativo {
+        display: block;
+    }
+
+    .menu-lateral--ativo {
+        right: 0;
+        transition: .5s;
+    }
+
 }
