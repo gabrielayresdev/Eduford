@@ -2,29 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
     font-family: 'Poppins', sans-serif;
 }
 
 header {
-    min-width: 100vw;
+    width: 100vw;
     min-height: 100vh;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/banner.png);
     background-position: center;
     background-size: cover;
     position: relative;
+    overflow: hidden;
+    max-width: 100%;
 
     color: #FFFFFF;
 }
 
 /* HEADER - NAV */
-
-.cabecalho {
-    width: 100%;
-    height: 60px;
-}
 
 .cabecalho nav {
     padding: 2% 6%;
@@ -72,14 +66,6 @@ header {
     text-decoration: none;
     color: #FFFFFF;
     font-size: 13px;
-}
-
-.menu-lateral {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    z-index: 2;
 }
 
 /* HEADER - CONTEÚDO */
@@ -149,7 +135,7 @@ header {
         background: #f44336;
         width: 65vw;
         height: 100vh;
-        transition: .5;
+        transition: .5s;
     }
 
     .cabecalho__links ul {
@@ -176,4 +162,71 @@ header {
         transition: .5s;
     }
 
+}
+
+/* CURSOS */
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.cursos {
+    text-align: center;
+    margin-top: 96px;
+}
+
+.titulo__secao {
+    font-size: 36px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.texto__secao {
+    font-size: 14px;
+    color: #777777;
+    line-height: 22px;
+    padding: 10px;
+    /* 
+    margin-top: 32px; */
+}
+
+.cursos-lista {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 76px;
+}
+
+.list__itens {
+    background: #fff3f3;
+    list-style-type: none;
+    padding: 20px 12px;
+    border-radius: 10px;
+    flex-basis: 31%;
+    margin-bottom: 5%;
+}
+
+.list__itens:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.box__titulo {
+    font-weight: 600;
+    font-size: 1.17rem;
+    margin: 10px 0;
+}
+
+.box__texto {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 540px) {
+    .cursos-lista {
+        display: block;
+    }
 }
