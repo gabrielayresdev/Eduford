@@ -206,7 +206,6 @@ main {
     padding: 20px 12px;
     border-radius: 10px;
     flex-basis: 31%;
-    margin-bottom: 5%;
 }
 
 .campus__itens {
@@ -214,7 +213,7 @@ main {
     border-radius: 20px;
     overflow: hidden;
     flex-basis: 32%;
-    margin-bottom: 5%;
+    margin-bottom: 32px;
     position: relative;
 
 }
@@ -278,7 +277,46 @@ main {
 }
 
 @media screen and (max-width: 540px) {
-    .cursos-lista {
+    .campus-lista {
+        display: block;
+    }
+}
+
+.facilities {
+    width: 100%;
+    margin: 64px auto 0 auto;
+    text-align: center;
+}
+
+.facilities__row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+.facilities__col {
+    flex-basis: 31%;
+    text-align: left;
+    border-radius: 10px;
+    margin-bottom: 32px;
+}
+
+.facilities__col img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.facilities__col h3 {
+    margin: 16px 0 15px 0;
+    text-align: left;
+}
+
+.facilities__col p {
+    padding: 0;
+}
+
+@media screen and (max-width: 540px) {
+    .facilities__row {
         display: block;
     }
 }
