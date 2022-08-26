@@ -58,7 +58,7 @@ header {
 
 .cabecalho__links ul li:hover::after {
     width: 100%;
-    transition: 1s;
+    transition: .5s;
 }
 
 .cabecalho__links ul li a {
@@ -166,15 +166,14 @@ header {
 
 /* CURSOS */
 
-main {
-    width: 80%;
-    margin: 0 auto;
-}
-
 .cursos,
-.campus {
+.campus,
+.coments {
     text-align: center;
     margin-top: 96px;
+
+    width: 80%;
+    margin: 0 auto;
 }
 
 .titulo__secao {
@@ -208,10 +207,6 @@ main {
     flex-basis: 31%;
     margin-bottom: 5%;
     transition: .5s;
-}
-
-.list__itens:last-child {
-    margin-bottom: 0;
 }
 
 .campus__itens {
@@ -294,7 +289,7 @@ main {
 }
 
 .facilities {
-    width: 100%;
+    width: 80%;
     margin: 64px auto 0 auto;
     text-align: center;
 }
@@ -373,4 +368,87 @@ main {
     .coments__row {
         display: block;
     }
+}
+
+.contato {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    /* max-width para retirar o scroll */
+    max-width: 100%;
+    padding: 100px 0;
+    position: relative;
+}
+
+.contato h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.contato__botao {
+    padding: 12px 34px;
+    text-align: center;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    text-decoration: none;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .5s;
+}
+
+.contato__botao:hover {
+    background: #6495ed;
+    border-color: #6495ed;
+    transition: .5s;
+}
+
+@media screen and (max-width: 540px) {
+    .contato h2 {
+        font-size: 20px;
+        padding: 0 5px;
+    }
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer h4 {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+footer a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.creditos {
+    font-size: 14px;
+    color: #777777;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 0 10px;
+    margin: 10px 0 10px;
+}
+
+.creditos span {
+    color: #6a5acd;
+}
+
+.creditos a {
+    color: #6a5acd;
+    text-decoration: none;
+}
+
+.fa-heart {
+    color: #6a5acd;
 }
