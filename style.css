@@ -206,6 +206,12 @@ main {
     padding: 20px 12px;
     border-radius: 10px;
     flex-basis: 31%;
+    margin-bottom: 5%;
+    transition: .5s;
+}
+
+.list__itens:last-child {
+    margin-bottom: 0;
 }
 
 .campus__itens {
@@ -260,6 +266,7 @@ main {
 
 .list__itens:hover {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    transition: .5s;
 }
 
 .box__titulo {
@@ -277,6 +284,10 @@ main {
 }
 
 @media screen and (max-width: 540px) {
+    .cursos-lista {
+        display: block;
+    }
+
     .campus-lista {
         display: block;
     }
@@ -317,6 +328,49 @@ main {
 
 @media screen and (max-width: 540px) {
     .facilities__row {
+        display: block;
+    }
+}
+
+.coments__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.coments__col {
+    flex-basis: 47%;
+    background: #fff3f3;
+    padding: 25px;
+    text-align: left;
+    border-radius: 10px;
+    margin-bottom: 5%;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 30px;
+}
+
+.coments__col img {
+    grid-row: span 3;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.coments__col p {
+    font-size: 14px;
+    color: #777777;
+    line-height: 22px;
+}
+
+.coments__col h3 {
+    margin: 16px 0 15px 0;
+    font-size: 1.17rem;
+}
+
+@media screen and (max-width: 540px) {
+    .coments__row {
         display: block;
     }
 }
