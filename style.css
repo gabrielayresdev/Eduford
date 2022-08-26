@@ -168,12 +168,12 @@ header {
 
 .cursos,
 .campus,
-.coments {
+.coments,
+.facilities {
     text-align: center;
-    margin-top: 96px;
 
     width: 80%;
-    margin: 0 auto;
+    margin: 96px auto 0 auto;
 }
 
 .titulo__secao {
@@ -187,44 +187,39 @@ header {
     color: #777777;
     line-height: 22px;
     padding: 10px;
-    /* 
-    margin-top: 32px; */
 }
 
-.cursos-lista,
-.campus-lista {
+.cursos__row,
+.campus__row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 76px;
+
+    margin-top: 3%;
 }
 
-.list__itens {
+.cursos__col {
     background: #fff3f3;
-    list-style-type: none;
     padding: 20px 12px;
     border-radius: 10px;
     flex-basis: 31%;
-    margin-bottom: 5%;
     transition: .5s;
 }
 
-.campus__itens {
-    list-style-type: none;
+.campus__col {
     border-radius: 20px;
     overflow: hidden;
     flex-basis: 32%;
-    margin-bottom: 32px;
     position: relative;
 
 }
 
-.campus__itens img {
+.campus__col img {
     display: block;
     width: 100%;
 }
 
-.campus__itens--coberto {
+.campus__col--coberto {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -235,7 +230,7 @@ header {
     transition: 0.5s;
 }
 
-.campus__itens--coberto h3 {
+.campus__col--coberto h3 {
     width: 100%;
     font-weight: 500;
     color: white;
@@ -248,18 +243,18 @@ header {
     transition: 0.5s;
 }
 
-.campus__itens--coberto:hover h3 {
+.campus__col--coberto:hover h3 {
     opacity: 1;
     bottom: 49%;
     transition: 0.5s;
 }
 
-.campus__itens--coberto:hover {
+.campus__col--coberto:hover {
     background: rgba(226, 0, 0, 0.3);
     transition: 0.5s;
 }
 
-.list__itens:hover {
+.cursos__col:hover {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
     transition: .5s;
 }
@@ -279,32 +274,29 @@ header {
 }
 
 @media screen and (max-width: 540px) {
-    .cursos-lista {
+
+    .cursos__row,
+    .campus__row {
         display: block;
     }
 
-    .campus-lista {
-        display: block;
+    .cursos__col,
+    .campus__col {
+        margin-bottom: 5%;
     }
-}
-
-.facilities {
-    width: 80%;
-    margin: 64px auto 0 auto;
-    text-align: center;
 }
 
 .facilities__row {
     display: flex;
     justify-content: space-between;
-    margin-top: 48px;
+
+    margin-top: 3%;
 }
 
 .facilities__col {
     flex-basis: 31%;
     text-align: left;
     border-radius: 10px;
-    margin-bottom: 32px;
 }
 
 .facilities__col img {
@@ -325,13 +317,17 @@ header {
     .facilities__row {
         display: block;
     }
+
+    .facilities__col {
+        margin-bottom: 5%;
+    }
 }
 
 .coments__row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 5%;
+    justify-content: space-around;
+    margin-top: 3%;
 }
 
 .coments__col {
@@ -340,7 +336,6 @@ header {
     padding: 25px;
     text-align: left;
     border-radius: 10px;
-    margin-bottom: 5%;
 
     display: grid;
     grid-template-columns: auto 1fr;
@@ -368,6 +363,10 @@ header {
     .coments__row {
         display: block;
     }
+
+    .coments__col {
+        margin-bottom: 5%;
+    }
 }
 
 .contato {
@@ -378,6 +377,7 @@ header {
     /* max-width para retirar o scroll */
     max-width: 100%;
     padding: 100px 0;
+    margin-top: 96px;
     position: relative;
 }
 
@@ -417,12 +417,12 @@ header {
 
 footer {
     width: 100%;
+    margin-top: 20px;
     text-align: center;
     padding: 30px 0;
 }
 
 footer h4 {
-    margin-top: 20px;
     font-weight: 600;
 }
 
