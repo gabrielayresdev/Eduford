@@ -135,7 +135,7 @@
     }
 
     .cabecalho__links {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: -200vw;
         display: block;
@@ -529,7 +529,7 @@ footer a {
 
 .contato--page {
     width: 80%;
-    margin: 0 auto;
+    margin: 5% auto;
 }
 
 .contato__mapa {
@@ -578,19 +578,143 @@ footer a {
     margin-bottom: 17px;
 }
 
-.contato--page__botao {
+.submit__botao {
     text-decoration: none;
     font-size: 13px;
     color: blue;
     padding: 12px 34px;
+    text-transform: uppercase;
+    width: 180px;
+    background: none;
+    cursor: pointer;
 
     border: 1px solid red;
     transition: .5s;
 }
 
-.contato--page__botao:hover {
+.submit__botao:hover {
     background: #6495ed;
     border-color: #6495ed;
     transition: .5s;
     color: #FFFFFF;
+}
+
+@media screen and (max-width: 540px) {
+    .contato__row {
+        display: block;
+    }
+
+    .contato__title {
+        font-size: 16px;
+    }
+
+    .contato--page .fa {
+        font-size: 20px;
+    }
+
+    .contato__col p {
+        font-size: 14px;
+    }
+}
+
+.blog__row {
+    display: flex;
+    width: 80%;
+    margin: 90px auto;
+    justify-content: space-between;
+}
+
+.blog__col--left {
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 3%;
+}
+
+.blog__col--left h2 {
+    color: #222;
+    font-weight: 600;
+}
+
+.blog__col--left p {
+    color: rgb(158, 156, 156);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+.blog__img {
+    width: 100%;
+}
+
+.comentario {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comentario h3 {
+    font-weight: 600;
+    font-size: 1.17rem;
+}
+
+.comentario__input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: rgb(240, 240, 240);
+}
+
+.comentario__submit__botao {
+    border: 1px solid rgb(65, 65, 65);
+    color: rgb(65, 65, 65);
+}
+
+.blog__col--right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 16px;
+    column-gap: 6px;
+    flex-basis: 32%;
+    width: 100%;
+    align-self: flex-start;
+    margin-top: 3%;
+}
+
+.blog__col--right h3 {
+    background: #f44336;
+    color: #fff;
+    padding: 7px 0;
+    font-size: 16px;
+    margin-bottom: 2px;
+    grid-column: span 2;
+    text-align: center;
+}
+
+.blog__col--right h5 {
+    font-size: 16px;
+    color: #555;
+    font-weight: 300;
+    padding-left: 5px;
+}
+
+.blog__col--right span {
+    font-size: 16px;
+    color: #555;
+    font-weight: 300;
+    justify-self: flex-end;
+    padding-right: 5px;
+}
+
+@media screen and (max-width: 540px) {
+    .blog__row {
+        display: block;
+    }
 }
